@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <script
+      src="https://kit.fontawesome.com/2d323a629b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+<body>
+    <div class="conteiner">
+        <!-- header -->
+        <div class="header">
+            <div class="header_logo">
+                <img src="../image/header/header_logo_horizon.png" alt="">
+            </div>
+            <ul class="header_menubar">
+                <li><a href="../0. main/main.html"><b>HOME</b></a></li>
+                <li><a href="../1. THE LITER/history.html"><b>HISTORY</b></a></li>
+                <li><a href="../2. 메뉴/menu.html"><b>MENU</b></a></li>
+            </ul>
+            <div class="header_menu">
+                <ul class="header_menu01">
+                    <li><img src="../image/header/header_icon_login.png" alt=""><a href="../4. Login/login.html">로그인</a></li>
+                    <li><img src="../image/header/header_icon_join.png" alt=""><a href="../3. Sign Up/signup.html">회원가입</a></li>
+                </ul>
+                <ul class="header_menu02">
+                    <li><img src="../image/header/header_icon_login.png" alt=""><a href="../4. Login/login.html">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_copy">
+
+        </div>
+
+        <!-- tit_sub -->
+        <div class="tit_sub" id="line_box">
+            <img src="./img-sub-mark.png" alt="">
+            <h1>Sign Up</h1>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <!-- 이용정보 -->
+            <div class="main_usage_information">
+                <h1>사이트 이용정보 입력</h1>
+                <div class="usage_information">
+                    <input class="id" type="text" placeholder="아이디" maxlength="8" />
+                </div>
+                <div class="usage_information">
+                    <input class="pass" type="password" placeholder="비밀번호" maxlength="12" />
+                    <input class="repass" type="password" placeholder="비밀번호 확인" maxlength="12" />
+                </div>
+            </div>
+            <!-- 개인정보 -->
+            <div class="main_privacy">
+                <h1>개인정보 입력</h1>
+                <div class="privacy">
+                    <input class="name" type="text" placeholder="이름" />
+                </div>
+                <div class="privacy">
+                    <input class="email" type="email" placeholder="E-mail" />
+                </div>
+                <div class="privacy">
+                    <input class="phonenum" type="number" placeholder="휴대폰번호" />
+                </div>
+                <div class="privacy">
+                    <input class="homenum" type="number" placeholder="전화번호" />
+                </div>
+                <div class="privacy">
+                    <input class="addr" id="addr_post"  type="text" placeholder="우편번호" readonly>
+                    <button type="button" onclick="findAddr()">주소검색</button>
+                    <br><input class="addr" id="addr_addr" type="text" placeholder="기본주소" readonly> <br>
+                    <input class="addr" id="addr_detail" type="text" placeholder="상세주소">
+                </div>
+            </div>
+            <script src="signup.js"></script>
+        </div>
+        <div class="bottom">
+            <div class="bottom_top">
+                <a href="../0. main/main.html"><button type="button">취소</button></a>
+            </div>
+            <div class="bottom_bottom">
+                <a href="#"><button type="button" onclick="join()">회원가입</button></a>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            function join(){
+                var id = $('.id').val();
+                var pass = $('.pass').val();
+                var repass = $('.repass').val();
+                var name = $('.name').val();
+                var email = $('.email').val();
+                var phonenum = $('.phonenum').val();
+                var homenum = $('.homenum').val();
+                var addr_post = $('#addr_post').val();
+                var addr_addr = $('#addr_addr').val();
+                var addr_detail = $('#addr_detail').val();
+              
+                // 빈칸 체크
+                if(id == '' || pass == '' || repass == '' || name == '' || 
+                email == '' || phonenum == '' || homenum == '' || addr_post == '' || 
+                addr_addr == '' || addr_detail == '') {
+                    alert('양식을 모두 적어주세요.');
+                    return false;
+                }
+                // 비밀번호 서로 같은지 체크
+                if(pass !== repass){
+                    alert('입력한 비밀번호가 다릅니다.');
+                    $('.repass').focus();
+                    return false;
+                }   
+                // 빈칸 없으면 회원 가입
+                if(id != '' && pass != '' && repass != '' && name != '' && 
+                email != '' && phonenum != '' && homenum != '' && addr_post != '' && 
+                addr_addr != '' && addr_detail != '') {
+                    alert('축하합니다. 회원 가입은 됐지만 로그인은 안됩니다.');
+                    return false;
+                }           
+            }
+          </script>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer_left">
+                <div class="footer_left_top">
+                    <img src="../0. main/footer/foologo-theliter.png" alt="">
+                    <img src="../0. main/footer/foologo-the.png" alt="">
+                </div>
+                <ul class="footer_left_middle">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">가맹안내</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">관리자로그인</a></li>
+                </ul>
+                <div class="footer_left_bottom">
+                    본사　부산광역시 부산진구 중앙대로 950 한상타워 8층 주식회사 희천
+                    <br>TEL. 1670-7762　　 FAX. 051-980-2240　　 E-mail : the@the-co-ltd.com
+                    <br>사업자번호 : 666-87-00214　 통신판매신고번호 : 제 2018-부산금정-0041호
+                </div>
+                <div class="footer_left_end">
+                    Copyrightⓒ THE LITER. All Right Reserved.
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_top">
+                    <img src="../../0. main/footer/footer_phone.png" alt="">
+                    <h1>1670-7762</h1>
+                </div>
+                <div class="footer_right_middle">
+                    <h4>
+                        평일 09시 ~ 16시 / 토요일 09시 ~ 12시
+                        <br>점심시간 12:30 ~ 13:30
+                    </h4>
+                </div>
+                <div class="footer_right_bottom">
+                    <a href="https://www.facebook.com"><img src="../0. main/footer/ico-sns-facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com"><img src="../0. main/footer/ico-sns-instagram.png" alt=""></a>
+                    <a href="https://story.kakao.com"><img src="../0. main/footer/ico-sns-kakao.png" alt=""></a>
+                    <a href="https://blog.naver.com"><img src="../0. main/footer/ico-sns-blog.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
