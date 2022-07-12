@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "나눔고딕 light";
+    src: url(../font/NanumGothicLight.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕 normal";
+    src: url(../font/NanumGothic.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕 bold";
+    src: url(../font/NanumGothicBold.ttf);
+}
+
+@font-face {
+    font-family: "나눔고딕 extrabold";
+    src: url(../font/NanumGothicExtraBold.ttf);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+}
+
+.conteiner {
+    width: 100%;
+    height: auto;
+}
+
+/* header */
+.header_copy {
+    width: 100%;
+    height: 120px;
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 2;
+    position: fixed;
+}
+
+.header_logo {
+    display: flex;
+}
+
+.header_logo_left > img {
+    margin-left: 150px;
+    margin-top: 30px;
+    height: 68px;
+    width: 70px;
+}
+
+.header_logo_right > img {
+    margin-left: 10px;
+    margin-top: 30px;
+    height: 68px;
+    width: 160px;
+}
+
+.header_menubar {
+    display: flex;
+    list-style: none;
+}
+
+.header_menubar li {
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 41px;
+    color: rgb(58, 58, 58);
+}
+
+.header_menubar > li > a:hover{
+    color: #000CFF;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000CFF;
+}
+
+.header_menu {
+    display: flex;
+    margin-right: 180px;
+}
+
+.header_menu01 {
+    display: flex;
+    list-style: none;
+    margin-top: 45px;
+}
+
+.header_menu01 img {
+    height: 20px;
+    cursor: pointer;
+    padding-right: 2px;
+}
+
+.header_menu01 li {
+    padding: 2px 13px;
+    font-size: 12px;
+}
+
+.header_menu01 > li:hover {
+    text-decoration: underline;
+}
+
+.header_menu02 {
+    list-style: none;
+    margin-top: 18px;
+    margin-right: -70px;
+    display: none;
+}
+
+.header_menu02 img {
+    height: 20px;
+    cursor: pointer;
+    padding-right: 2px;
+}
+
+.header_menu02 li {
+    font-size: 12px;
+}
+
+.header_menu02 > li:hover {
+    text-decoration: underline;
+}
+
+/* For small screen 1차 */
+@media screen and (max-width: 1250px) {
+    /* Menu */
+
+    .header_menubar {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* When toggle button is clicked - active state */
+    .header_menu {
+      display: flex;
+    }
+}
+
+/* For small screen 2차 */
+@media screen and (max-width: 770px) {
+    .header {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_logo_left > img {
+        margin-left: 150px;
+        margin-top: 12px;
+        height: 36px;
+        width: 42px;
+    }
+
+    .header_logo_right > img {
+        margin-left: 3px;
+        margin-top: 12px;
+        height: 36px;
+        width: 94px;
+    }
+  
+    /* Menu */
+    .header_menubar {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+
+    .header_menu01 {
+        display: none;
+    }
+
+    .header_menu02 {
+        display: block;
+    }
+
+    .tit_sub {
+        margin-top: -60px;
+    }
+}
+/* end header */
+
+
+/* tit_sub */
+.tit_sub {
+    width: 100%;
+    height: 300px;
+    background-color: #5F504D;
+    text-align: center;
+    color: white;
+    padding-top: 75px;
+}
+
+.tit_sub > img {
+    height: 30%;
+    animation: logo 1s linear;
+}
+
+@keyframes logo {
+    0% {
+        transform: rotateY( 180deg );
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    60% {
+        transform: rotateY( 360deg );
+        opacity: 1;
+    }
+    80% {
+        transform: rotateY( 335deg );
+    }
+    100% {
+        transform: rotateY( 360deg );
+    }
+}
+
+.tit_sub > h1 {
+    font-family: "나눔고딕 normal", serif;
+    font-weight: lighter;
+    font-size: 50px;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    margin-top: 15px;
+}
+/* end tit_sub */
+
+
+/* content_box */
+.content_box {
+    width: 100%;
+    height: autopx;
+    background-color: white;
+}
+
+.history_list > ul {
+    color: #000CFF;
+    font-family: "나눔고딕 extrabold", serif;
+    font-size: 40px;
+    margin-top: 55px;
+    padding-left: 485px;
+}
+
+.history_list > ul > li {
+    color: black;
+    font-family: "나눔고딕 normal", serif;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    list-style: none;
+    margin-top: 18px;
+    margin-bottom: -6px;
+    margin-left: 10px;
+}
+
+.history_list > ul > li::before {
+    content: '· ';
+    color: black;
+}
+
+.img_ct_max {
+    margin-top: 114px;
+    margin-bottom: 96px;
+    text-align: center;
+}
+/* end content_box */
+
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 309px;
+    background-color: #5F504D;
+    display: flex;
+}
+
+.footer_left {
+    flex: 1;
+}
+
+.footer_left_top {
+    margin-top: 49px;
+    margin-left: 219px;
+}
+
+.footer_left_top > img {
+    margin-left: 15px;
+    height: 60px;
+}
+
+.footer_left_middle {
+    display: flex;
+    list-style: none;
+    margin-left: 223px;
+}
+
+.footer_left_middle > li {
+    padding-top: 25px;
+    padding-left: 17px;
+    padding-right: 10px;
+    font-family: "나눔고딕 normal", serif;
+    font-size: 15px;
+    letter-spacing: -1.6px;
+    word-spacing: 2px;
+    color: rgb(255, 255, 255);
+}
+
+.footer_left_bottom {
+    font-family: "나눔고딕 bold", serif;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: -1.3px;
+    word-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 233px;
+    color: #A8A09F;
+}
+
+.footer_left_end {
+    font-family: "나눔고딕 bold", serif;
+    font-size: 14px;
+    word-spacing: 2px;
+    margin-top: 10px;
+    margin-left: 233px;
+    color: #8D8381;
+}
+
+.footer_right {
+    flex: 1;
+}
+
+.footer_right_top {
+    display: flex;
+    color: white;
+    margin-top: 47px;
+    margin-left: 418px;
+}
+
+.footer_right_top > h1 {
+    font-family: "나눔고딕 normal", serif;
+    font-weight: lighter;
+    font-size: 39px;
+    letter-spacing: -2px;
+    word-spacing: 2px;
+    margin-left: 65px;
+}
+
+.footer_right_middle {
+    text-align: right;
+    font-size: 13px;
+    color: #B1AAA8;
+    margin-top: 9px;
+    margin-right: 232px;
+}
+
+.footer_right_middle > h4 {
+    font-family: "나눔고딕 normal", serif;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -0.8px;
+    word-spacing: 2px;
+}
+
+.footer_right_bottom {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 232px;
+}
+
+.footer_right_bottom > a {
+    padding: 15px 11px 10px 11px;
+    background-color: #4C403E;
+}
