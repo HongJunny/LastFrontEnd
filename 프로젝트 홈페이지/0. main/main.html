@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script
+      src="https://kit.fontawesome.com/2d323a629b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="conteiner">
+        <!-- header -->
+        <div class="header">
+            <div class="header_logo">
+                <div class="header_logo_left">
+                    <img src="../new logo/blue/logo.png" alt="">
+                </div>
+                <div class="header_logo_right">
+                    <img src="../new logo/blue/header_logo_horizon.gif" alt="">
+                </div>
+            </div>
+            <ul class="header_menubar">
+                <li><a href="./main.html"><b>HOME</b></a></li>
+                <li><a href="../1. THE LITER/history.html"><b>HISTORY</b></a></li>
+                <li><a href="../2. 메뉴/menu.html"><b>MENU</b></a></li>
+            </ul>
+            <div class="header_menu">
+                <ul class="header_menu01">
+                    <li><img src="../image/header/header_icon_login.png" alt=""><a href="../4. Login/login.html">로그인</a></li>
+                    <li><img src="../image/header/header_icon_join.png" alt=""><a href="../3. Sign Up/signup.html">회원가입</a></li>
+                </ul>
+                <ul class="header_menu02">
+                    <li><img src="../image/header/header_icon_login.png" alt=""><a href="../4. Login/login.html">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_copy">
+
+        </div>
+        <div class="wrap">
+            <!-- 메인 배너 -->
+                <!-- 메인 배너 PC -->
+            <div class="main_banner_pc">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="./main_banner_image/20201207_01_pc.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20210713_pc.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220210_pc.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220228_01_pc.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220228_02_pc.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220408_pc.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220523_01_pc.jpg" alt=""></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+                <!-- 메인 배너 모바일 -->
+            <div class="main_banner_m">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="./main_banner_image/20201207_01_m.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20210713_m.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220210_m.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220228_01_m.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220228_02_m.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220408_m.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./main_banner_image/20220523_01_m.jpg" alt=""></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+                <!-- 배너 슬라이드 -->
+            <script>
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    autoplay: {
+                        delay: 4400,
+                    },
+                    loop: true,
+        
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+        
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+        
+                    // And if we need scrollbar
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+            </script>
+            <!-- 메인 메뉴 -->
+            <div class="main_menu">
+                <div class="main_menu_logo">
+                    <img src="./img-main-menu.png" alt="">
+                </div>
+                <div class="main_menu_text">
+                    <div class="main_menu_text01">
+                        <h3>엄선된 원두에서 추출한 최상의 맛과 향을
+                            <br>언제 어디서나 간편하게 즐겨보세요.</h3>
+                    </div>
+                    <div class="main_menu_text02">
+                        <a href="#">메뉴 보기 ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 메인 브랜드 -->
+            <div class="main_brand_new">
+                <div class="main_brand_new_logo">
+                    <img src="./main_brand_new_image/img-brand2.png" alt="">
+                </div>
+                <div class="main_brand_new_text">
+                    <div class="main_brand_new_text01">
+                        <h2 id="main_brand_new_text">국내최초 전 메뉴 1L</h2>
+                        <h1 id="main_brand_new_text">커피전문점 쭌스</h1>
+                    </div>
+                    <div class="main_brand_new_text02">
+                        <h4 id="main_brand_new_text">JJun's는 1리터 대용량 커피를 대표하는 선두주자 라는 의미로
+                            <br>2015년 여름 국내최초로 전메뉴 1리터 사이즈의 커피와 음료를 도입 하였습니다.
+                            <br>넉넉한 용량, 합리적인 가격, 우수한 품질의 착한 음료 국민커피전문점 브랜드 입니다.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- 메인 스페셜티 -->
+            <div class="main_specialty">
+                <div class="main_specialty_text">
+                    <div class="main_specialty_text01">
+                        <h2 id="main_brand_new_text">쭌스</h2>
+                        <h1 id="main_brand_new_text">스페셜티 커피 블렌드</h1>
+                        <h3 id="main_brand_new_text">JJun's SPECIALTY COFFEE BLEND</h3>
+                        <h4 id="main_brand_new_text">다크초콜릿과 카카오의 풍미, 굿 밸런스로 깔끔하게 떨어지는 애프터</h4>
+                    </div>
+                    <div class="main_specialty_text02">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="main_specialty_logo">
+                    <img src="./main_specialty_image/img-specialty.png" alt="">
+                </div>
+            </div>
+            <div class="main_specialty_bsca">
+                <div class="main_specialty_bsca_side">
+
+                </div>
+                <div class="main_specialty_bsca_main">
+                    <div class="main_specialty_bsca_main_logo">
+                        <img src="./main_specialty_image/img-brazil.png" alt="">
+                    </div>
+                    <div class="main_specialty_bsca_main_text">
+                        <h2>JJun's Specialty Coffee Bean</h2>
+                        <h4>
+                            지리, 기후, 생산지 등의 특별한 환경에서 자란 커피 중
+                            <br><span>'브라질 스페셜티 커피 협회(BSCA)'</span>의 평가를 거쳐
+                            <br>기준점수 이상을 받은 우수한 등급의 커피를 말합니다.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- 메인 프리미엄 -->
+            <div class="main_premium">
+                <div class="main_premium_text">
+                    <img id="main_brand_new_text" src="./main_premium_image/main_premium_text.png" alt="">
+                    <h4 id="main_brand_new_text">
+                        국내 최초 전 메뉴 1리터 사이즈의 넉넉한 용량
+                        <br>가성비를 넘어 가심비를 만족시키는 제품
+                        <br>우수한 원재료 사용으로 믿을 수 있는 품질
+                    </h4>
+                </div>
+                <div class="main_premium_logo">
+                    <img src="./main_premium_image/img-premium.png" alt="">
+                </div>
+            </div>
+            <!-- 메인 수상 -->
+            <div class="main_award">
+                <div class="main_award_top">
+                    <div class="main_award_top_text">
+                        <div class="main_award_top_text01">
+                            <h3 id="main_brand_new_text">Good Coffee JJun's</h3>
+                            <h2 id="main_brand_new_text">쭌스, 2022 소비자가 뽑은</h2>
+                            <h1 id="main_brand_new_text">
+                                서비스 고객만족대상
+                                <br>5년 연속 수상
+                            </h1>
+                            <h5 id="main_brand_new_text">머니 투데이가 주최하는 '2022 소비자가 뽑은 서비스 고객만족대상'에서
+                                <br>쭌스가 '2022 소비자가 뽑은 서비스 고객만족대상'
+                                <br>메뉴&연구개발 부문 대상을 5년 연속 수상했다.
+                            </h5>
+                        </div>
+                        <div class="main_award_top_text02">
+                            <a href="#">관련기사 보기</a>
+                        </div>
+                    </div>
+                    <div class="main_award_top_logo">
+                        <img src="./main_award_image/img-main-ucc3.png" alt="">
+                    </div>
+                </div>
+                <div class="main_award_bottom_area">
+                    <div class="main_award_bottom01">
+                        　
+                    </div>
+                    <div class="main_award_bottom">
+                        <div class="main_award_bottom_img">
+                            <img src="./main_award_image/img-award.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 메인 매장 -->
+            <div class="main_store">
+                <div class="main_store_text">
+                    <div class="main_store_text01">
+                        <h2 id="main_brand_new_text">
+                            <span>가장 가까운 곳</span>에서
+                            <br>쭌스를 경험하세요!
+                        </h2>
+                        <h4 id="main_brand_new_text">
+                            JJun's는 넉넉한 용량, 합리적인 가격, 우수한 품질의
+                            <br>착한 음료를 지향하는 커피 전문점 브랜드입니다.
+                        </h4>
+                    </div>
+                    <div class="main_store_text02">
+                        <a id="main_brand_new_text" href="#">가까운 매장 찾기</a>
+                    </div>
+                </div>
+                <div class="main_store_logo">
+                    <img src="./main_store_image/main_store_logo.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer_left">
+                <div class="footer_left_top">
+                    <img src="./footer/foologo-theliter.png" alt="">
+                    <img src="./footer/foologo-the.png" alt="">
+                </div>
+                <ul class="footer_left_middle">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">가맹안내</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">관리자로그인</a></li>
+                </ul>
+                <div class="footer_left_bottom">
+                    본사 　 부산광역시 부산진구 중앙대로 950 한상타워 8층 주식회사 희천
+                    <br>TEL. 1670-7762 　 FAX. 051-980-2240 　 E-mail : the@the-co-ltd.com
+                    <br>사업자번호 : 666-87-00214 　 통신판매신고번호 : 제 2018-부산금정-0041호
+                </div>
+                <div class="footer_left_end">
+                    Copyrightⓒ THE LITER. All Right Reserved.
+                </div>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_top">
+                    <img src="./footer/footer_phone.png" alt="">
+                    <h1>1670-7762</h1>
+                </div>
+                <div class="footer_right_middle">
+                    <h4>
+                        평일 09시 ~ 16시 / 토요일 09시 ~ 12시
+                        <br>점심시간 12:30 ~ 13:30
+                    </h4>
+                </div>
+                <div class="footer_right_bottom">
+                    <a href="https://www.facebook.com"><img src="./footer/ico-sns-facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com"><img src="./footer/ico-sns-instagram.png" alt=""></a>
+                    <a href="https://story.kakao.com"><img src="./footer/ico-sns-kakao.png" alt=""></a>
+                    <a href="https://blog.naver.com"><img src="./footer/ico-sns-blog.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
